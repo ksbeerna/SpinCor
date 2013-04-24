@@ -1,1 +1,13 @@
-test
+add the following lines to your .bashrc or .bash_profile
+
+source /afs/cern.ch/sw/lcg/app/releases/ROOT/5.34.05/x86_64-slc5-gcc43-opt/root/bin/thisroot.sh
+
+export LD_LIBRARY_PATH=/afs/cern.ch/work/k/ksbeerna/SpinCor/boost_1_53_0/lib/:${LD_LIBRARY_PATH}
+export LIBRARY_PATH=/afs/cern.ch/work/k/ksbeerna/SpinCor/boost_1_53_0/lib:${LIBRARY_PATH}
+export CPLUS_INCLUDE_PATH=/afs/cern.ch/work/k/ksbeerna/SpinCor/boost_1_53_0/include/:${CPLUS_INCLUDE_PATH}
+export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:/afs/cern.ch/work/k/ksbeerna/SpinCor
+
+in which you refer to your own working area
+
+Do NOT source the CMSSW environment when using SpinCor
+
