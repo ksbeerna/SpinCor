@@ -1,0 +1,52 @@
+8
+
+dir
+3110
+https://ssftrac.ugent.be/svn/top/trunk/ROOT/classes/ConfigReader
+https://ssftrac.ugent.be/svn/top
+
+
+
+2011-05-12T13:18:36.884270Z
+2528
+benjamin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+480b407c-3644-40a1-ad61-42b7afe179cb
+
+ConfigReader.cc
+file
+
+
+
+
+2011-10-06T08:34:43.000000Z
+08365025130483a99e42c31f790f4916
+2011-05-12T13:18:36.884270Z
+2528
+benjamin
+
+ConfigReader.h
+file
+
+
+
+
+2011-10-06T08:34:43.000000Z
+cb0cb5fbd6be81899792ee7701628bef
+2011-05-12T13:18:36.884270Z
+2528
+benjamin
+

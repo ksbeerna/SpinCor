@@ -1,0 +1,27 @@
+TTbar_cor #generator level, delta TF
+TTbar_uncor 
+WJets
+WJets_cuts #generator level, delta TF, kinematic cuts (maybe unreliable)
+TTbar_cor_cuts
+TTbar_uncor_cuts
+WJets_smear #smeared, gaussian TF, kinematic cuts
+TTbar_cor_smear
+TTbar_uncor_smear
+TTbar_cor_HitFit #smeared, HitFit updated kinematics, top mass constraint, delta TF
+TTbar_uncor_HitFit
+WJets_HitFit
+TTbar_cor_HitFit_TF #smeared, HitFit updated kinematics, top mass constraint, gaussian TF
+TTbar_uncor_HitFit_TF
+WJets_HitFit_TF
+TTbar_cor_HitFit_NoTopMass #smeared, HitFit updated kinematics, delta TF
+TTbar_uncor_HitFit_NoTopMass
+WJets_HitFit_NoTopMass
+TTbar_cor_HitFit_TF_NoTopMass #smeared, HitFit updated kinematics, gaussian TF
+TTbar_uncor_HitFit_TF_NoTopMass
+WJets_HitFit_TF_NoTopMass
+TTbar_cor_HitFitCombo #smeared, HitFit combination only, gaussian TF 
+TTbar_uncor_HitFitCombo
+WJets_HitFitCombo
+TTbar_cor_smearPerm #smeared, permutations on, gaussian TF
+TTbar_uncor_smearPerm
+WJets_smearPerm
