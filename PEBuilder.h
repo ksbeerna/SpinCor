@@ -1,6 +1,7 @@
 #ifndef EIRE_PEBUILDER_H
 #define EIRE_PEBUILDER_H
 #include <math.h>
+#include "TRandom2.h"
 #include <iostream>
 #include <algorithm>
 #include <string.h>
@@ -84,24 +85,31 @@
 #include "RooHistPdf.h"
 #include "RooAddPdf.h"
 #include "RooAbsPdf.h"
-
+//#include "ProfileLikelihoodCalculator.h"
+//#include "LikelihoodInterval.h"
+//#include "LikelihoodIntervalPlot.h"
+ 
 using namespace std;
 
 namespace eire{
   class PEBuilder{
   public:
-    PEBuilder(std::vector< std::vector<float> > Cor, std::vector< std::vector<float> > Uncor, float mixing, std::vector< std::vector<float> > WJets, float Back_frac, bool use_back);
+    PEBuilder(std::vector< std::vector<float> > Cor, std::vector< std::vector<float> > Uncor, std::vector< std::vector<float> > WJets, float Back_frac, bool use_back, string name);
     ~PEBuilder();
-    void SetProperties(int Bins, int EvPerPE, float lowRange, float highRange, bool v); 
-    void Mix();
+    void SetProperties(int Bins, int EvPerPE, float lowRange, float highRange, bool v, float mixing);
+    std::vector<TH1F> DrawTemplates();
+    std::vector<double> Mix(std::vector<TH1F> templates);
+    void TurnMatchingOn(std::vector< bool > cor, std::vector< bool > uncor);
 
   private:
-    std::vector<TH1F> DrawTemplates();
     std::vector<double> Fit(TH1F *hist_data, int k, TH1F TemplateCor, TH1F TemplateUncor);
     std::vector<double> FitB(TH1F *hist_data, int k, TH1F TemplateCor, TH1F TemplateUncor, TH1F TemplateWJets);
     std::vector< std::vector<float> > L_Cor;
     std::vector< std::vector<float> > L_Uncor;
     std::vector< std::vector<float> > L_WJets;
+    std::vector< bool > match_cor;
+    std::vector< bool > match_uncor;
+    bool match;
     bool Use_back;
     float Wfrac;
     int nBins;
@@ -110,6 +118,7 @@ namespace eire{
     float high_range;
     float mix_frac;
     bool verbose;
+    string Name;
   };
 }
 

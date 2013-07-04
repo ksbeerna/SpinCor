@@ -25,3 +25,5 @@ WJets_HitFitCombo
 TTbar_cor_smearPerm #smeared, permutations on, gaussian TF
 TTbar_uncor_smearPerm
 WJets_smearPerm
+TTbar_MCatNLO_cor_5jets #MCatNLO, 8TeV, gen level information (so right combination)
+TTbar_MCatNLO_uncor_5jets

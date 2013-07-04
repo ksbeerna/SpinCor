@@ -13,6 +13,7 @@
 #include <cstdlib>
 #include <stdio.h>
 #include <iomanip>
+#include <Matching.h>
 using namespace std;
 
 namespace eire{
@@ -21,9 +22,13 @@ namespace eire{
     Collector(bool HF=false, float Chi=99999, float M_low=0, float M_high=99999, float Like_cor_cut_up = 999999, float Like_cor_cut_down = 0,float Like_uncor_cut_up = 999999, float Like_uncor_cut_down = 0);
     ~Collector();
     std::vector<std::vector<float> > CollectLikelihoods(std::string name); 
+    void TurnMatchingOn();
+    std::vector< bool > ReturnPermutations();
     
   private:
     bool use_HitFit;
+    bool match;
+    std::vector< bool > Permutations;
     float chicut;
     float m_low;
     float m_high;

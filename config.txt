@@ -1,24 +1,27 @@
 [global]
 #allowed dataset names can be found in: allowed_datasetnames.txt
-Dataset_cor = TTbar_cor_HitFitCombo
-Dataset_uncor = TTbar_uncor_HitFitCombo
-#Dataset_wjets = WJets
+Dataset_cor = TTbar_cor_smear
+Dataset_uncor = TTbar_uncor_smear
+Dataset_wjets = WJets_smear
 
-nbins = 150
-Ev_PE = 30000
-lowRange = -3.5
-highRange = 3.5
+output_name = GenLevel_smear_B10P
 
-with_HitFit = true
-Chicut = 20. #only makes sense if with_HitFit = true
-MassLow = 150. #only makes sense if with_HitFit = true and the top mass is not fitted 
-MassHigh = 225.
+nbins = 100
+Ev_PE = 500
+lowRange = -7.
+highRange = 7.
 
-mixing = 1.
-use_back = false
-#Wfrac = 0.003 #only makes sense if Dataset_wjets is enabled
+with_HitFit = false
+#Chicut = 20. #only makes sense if with_HitFit = true
+#MassLow = 150. #only makes sense if with_HitFit = true and the top mass is not fitted 
+#MassHigh = 225.
+
+RunFullExp = false
+mixing = 1
+use_back = true #true to fit background with template, adding background but having use_back false will mix in background, but not fit it explicitly
+Wfrac = 0.10 #only makes sense if Dataset_wjets is enabled
 verbose = false #to print out fit histograms
-Like_cor_cut_up = 60.
-Like_cor_cut_down = 50.
-Like_uncor_cut_up = 60.
-Like_uncor_cut_down = 50.
+#Like_cor_cut_up = 60.
+#Like_cor_cut_down = 50.
+#Like_uncor_cut_up = 60.
+#Like_uncor_cut_down = 50.

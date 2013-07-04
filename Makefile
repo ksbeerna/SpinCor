@@ -23,7 +23,7 @@ ADDITIONALLIBS = -lFoam -lRooFitCore -lRooFit -lHtml -lGenVector -lboost_regex -
 LIBS          = $(ROOTLIBS) $(SYSLIBS) $(ADDITIONALLIBS)
 
 PROJECT = SpinCor
-OBJ = $(PROJECT).o ConfigReader.o Collector.o PEBuilder.o
+OBJ = $(PROJECT).o ConfigReader.o Collector.o PEBuilder.o Linearity.o Matching.o
 
 # compile all programs
 all: $(PROJECT)
